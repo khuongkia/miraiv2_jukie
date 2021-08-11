@@ -4,7 +4,7 @@ module.exports.config = {
   version: "1.0.1",
   hasPermssion: 0,
   credits: "manhIT",
-  description: "goibot",
+  description: "Chửi bot ban ngay lập tức",
   commandCategory: "Hệ thống",
   usages: "noprefix",
   cooldowns: 5,
@@ -15,14 +15,14 @@ module.exports.handleEvent = function({ api, event, args, Threads }) {
   const time = moment.tz("Asia/Ho_Chi_minh").format("HH:MM:ss L");
   var idgr = `${event.threadID}`;
 
-  var tl = ["chào bạn tôi là bot Mạnh", "bạn gọi tôi có việc gì?", "tôi yêu bạn vai lon", "Yêu em <3", "Hi, chào con vợ bé:3", "Vợ gọi có việc gì không?", "Sử dụng callad để liên lạc với admin!"];
+  var tl = ["chào bạn tôi là bot Jukie", "bạn gọi tôi có việc gì?", "Yêu em <3", "Sử dụng adminbot để xemn thông tin admin!"];
   var rand = tl[Math.floor(Math.random() * tl.length)];
 
-  if ((event.body.toLowerCase() == "bot ngu")) {
+  if ((event.body.toLowerCase() == "bot ngu") || (event.body.toLowerCase() == "bot lon") || (event.body.toLowerCase() == "bot óc chó")|| (event.body.toLowerCase() == "bot lồn") || (event.body.toLowerCase() == "bot súc vật")) {
     data.reason = reason || null;
     data.dateAdded = time;
     global.data.threadBanned.set(idgr, { reason: data.reason, dateAdded: data.dateAdded });
-    return api.sendMessage(`Nhóm ${idgr} của bạn đã bị ban, không thể sử dụng bot!, lý do: chửi bot `, threadID);
+    return api.sendMessage(`❌Nhóm ${idgr} của bạn đã bị ban, không thể sử dụng bot!\n❌Lý do: Chửi bot\n✔️Vui lòng liên hệ admin để xem xét lại. `, threadID);
   };
 
   if ((event.body.toLowerCase() == "bot lồn") || (event.body.toLowerCase() == "bot lon")) {
