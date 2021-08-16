@@ -7,4 +7,4 @@ module.exports.config = {
 	commandCategory: "Admin",
 	cooldowns: 0
         };
-module.exports.run = ({event, api}) =>api.sendMessage("Vui lòng chờ 1p...",event.threadID, () =>process.exit(1))
+module.exports.run = ({event, api}) =>api.sendMessage("⚡️Vui lòng chờ 1p...",event.threadID, () =>process.exit(1))

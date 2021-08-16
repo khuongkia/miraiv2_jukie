@@ -24,10 +24,10 @@ module.exports.run = async function ({ api, args, event }) {
 
   const lyricsFinder = require('lyrics-finder');
 
-    let lyrics = await lyricsFinder(args.join(" ")) || "Not Found!";
+    let lyrics = await lyricsFinder(args.join(" ")) || "⚡️Not Found!";
 
     console.log(lyrics);
 
-api.sendMessage(`${lyrics}`, event.threadID, event.messageID);
+api.sendMessage(`⚡️${lyrics}`, event.threadID, event.messageID);
 
 }

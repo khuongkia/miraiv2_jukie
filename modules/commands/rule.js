@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "rule",
 	version: "1.0.1",
 	hasPermssion: 0,
-	credits: "Jukie~",
+	credits: "CatalizCS",
 	description: "Tùy biến luật cho từng group",
 	commandCategory: "Nhóm",
 	usages: "[add/remove/all] [content/ID]",
@@ -32,8 +32,8 @@ module.exports.run = ({ event, api, args, permssion }) => {
 
     switch (args[0]) {
         case "add": {
-            if (permssion == 0) return api.sendMessage("[Rule] Bạn không đủ quyền hạn để có thể sử dụng thêm luật!", threadID, messageID);
-            if (content.length == 0) return api.sendMessage("[Rule] Phần nhập thông tin không được để trống", threadID, messageID);
+            if (permssion == 0) return api.sendMessage("⚡️Bạn không đủ quyền hạn để có thể sử dụng thêm luật!", threadID, messageID);
+            if (content.length == 0) return api.sendMessage("⚡️Phần nhập thông tin không được để trống", threadID, messageID);
             if (content.indexOf("\n") != -1) {
                 const contentSplit = content.split("\n");
                 for (const item of contentSplit) thisThread.listRule.push(item);
@@ -42,14 +42,14 @@ module.exports.run = ({ event, api, args, permssion }) => {
                 thisThread.listRule.push(content);
             }
             writeFileSync(pathData, JSON.stringify(dataJson, null, 4), "utf-8");
-            api.sendMessage('[Rule] Đã thêm luật mới cho nhóm thành công!', threadID, messageID);
+            api.sendMessage('⚡️ Đã thêm luật mới cho nhóm thành công!', threadID, messageID);
             break;
         }
         case "list":
         case"all": {
             var msg = "", index = 0;
             for (const item of thisThread.listRule) msg += `${index+=1}/ ${item}\n`;
-            if (msg.length == 0) return api.sendMessage("[Rule] Nhóm của bạn hiện tại chưa có danh sách luật để hiển thị!", threadID, messageID);
+            if (msg.length == 0) return api.sendMessage("⚡️Nhóm của bạn hiện tại chưa có danh sách luật để hiển thị!", threadID, messageID);
             api.sendMessage(`=== Luật của nhóm ===\n\n${msg}`, threadID, messageID);
             break;
         }
@@ -57,17 +57,17 @@ module.exports.run = ({ event, api, args, permssion }) => {
         case "remove":
         case "delete": {
             if (!isNaN(content) && content > 0) {
-                if (permssion == 0) return api.sendMessage("[Rule] Bạn không đủ quyền hạn để có thể sử dụng xóa luật!", threadID, messageID);
-                if (thisThread.listRule.length == 0) return api.sendMessage("[Rule] Nhóm của bạn chưa có danh sách luật để có thể xóa!", threadID, messageID);
+                if (permssion == 0) return api.sendMessage("⚡️Bạn không đủ quyền hạn để có thể sử dụng xóa luật!", threadID, messageID);
+                if (thisThread.listRule.length == 0) return api.sendMessage("⚡️Nhóm của bạn chưa có danh sách luật để có thể xóa!", threadID, messageID);
                 thisThread.listRule.splice(content - 1, 1);
-                api.sendMessage(`[Rule] Đã xóa thành công luật có số thứ tự thứ ${content}`, threadID, messageID);
+                api.sendMessage(`⚡️Đã xóa thành công luật có số thứ tự thứ ${content}`, threadID, messageID);
                 break;
             }
             else if (content == "all") {
-                if (permssion == 0) return api.sendMessage("[Rule] Bạn không đủ quyền hạn để có thể sử dụng xóa luật!", threadID, messageID);
-                if (thisThread.listRule.length == 0) return api.sendMessage("[Rule] Nhóm của bạn chưa có danh sách luật để có thể xóa!", threadID, messageID);
+                if (permssion == 0) return api.sendMessage("⚡️Bạn không đủ quyền hạn để có thể sử dụng xóa luật!", threadID, messageID);
+                if (thisThread.listRule.length == 0) return api.sendMessage("⚡️Nhóm của bạn chưa có danh sách luật để có thể xóa!", threadID, messageID);
                 thisThread.listRule = [];
-                api.sendMessage(`[Rule] Đã xóa thành công toàn bộ luật của nhóm!`, threadID, messageID);
+                api.sendMessage(`⚡️Đã xóa thành công toàn bộ luật của nhóm!`, threadID, messageID);
                 break;
             }
         }

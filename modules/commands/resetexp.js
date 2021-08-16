@@ -2,7 +2,7 @@ module.exports.config = {
     name: "resetexp",
     version: "1.0.0",
     hasPermssion: 1,
-    credits: "Jukie~",
+    credits: "~",
     description: "cc del all",
     commandCategory: "admin",
     usages: "[cc], [del], [all]",

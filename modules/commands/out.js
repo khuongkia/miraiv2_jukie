@@ -2,7 +2,7 @@ module.exports.config = {
   name: "out",
   version: "1.0.0",
   hasPermssion: 2,
-  credits: "Jukie~",
+  credits: "HungCho",
   description: "out box",
   commandCategory: "Admin",
   usages: "out [tid]",
@@ -14,6 +14,6 @@ module.exports.run = async function({ api, event, args }) {
    let namee = await api.getThreadInfo(tid)
   if (!tid) return api.removeUserFromGroup(api.getCurrentUserID(), event.threadID);
 
-else return api.removeUserFromGroup(api.getCurrentUserID(), tid, () => api.sendMessage("💦Bot đã rời nhóm này", event.threadID, event.messageID));
+else return api.removeUserFromGroup(api.getCurrentUserID(), tid, () => api.sendMessage("⚡️Bot đã rời nhóm này", event.threadID, event.messageID));
 
 }

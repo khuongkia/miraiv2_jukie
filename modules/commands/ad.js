@@ -2,7 +2,7 @@
   name: "adminbot",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "Dien",
+  credits: "Jukie~",
   description: "Kiểm tra thông tin admin bot.",
   commandCategory: "INFO ADMINBOT",
   usages: "",

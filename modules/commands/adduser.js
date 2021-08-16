@@ -26,13 +26,13 @@ module.exports.run = async function ({ api, event, args, Threads, Users }) {
 	var { participantIDs, approvalMode, adminIDs } = await api.getThreadInfo(threadID);
 	var participantIDs = participantIDs.map(e => parseInt(e));
 
-	if (!args[0]) return out("Vui lòng nhập 1 id/link profile user cần add.");
+	if (!args[0]) return out("⚡️Vui lòng nhập 1 id/link profile user cần add.");
 	if (!isNaN(args[0])) return adduser(args[0], undefined);
 	else {
 		try {
 			var [id, name, fail] = await getUID(args[0], api);
 			if (fail == true && id != null) return out(id);
-			else if (fail == true && id == null) return out("Không tìm thấy ID người dùng.")
+			else if (fail == true && id == null) return out("⚡️Không tìm thấy ID người dùng.")
 			else {
 				await adduser(id, name || "người dùng Facebook");
 			}
@@ -57,9 +57,9 @@ module.exports.run = async function ({ api, event, args, Threads, Users }) {
 				await api.addUserToGroup(id, threadID);
 			}
 			catch {
-				return out(`Không thể thêm ${name ? name : "người dùng"} vào nhóm.`);
+				return out(`⚡️Không thể thêm ${name ? name : "người dùng"} vào nhóm.`);
 			}
-			if (approvalMode === true && !admins.includes(botID)) return out(`Đã thêm ${name ? name : "thành viên"} vào danh sách phê duyệt !`);
+			if (approvalMode === true && !admins.includes(botID)) return out(`⚡️Đã thêm ${name ? name : "thành viên"} vào danh sách phê duyệt !`);
 			else return join({ api, event: form, Threads, Users });
 		}
 	}

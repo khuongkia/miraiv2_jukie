@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "loikhuyen",
 	version: "1.0.2",
 	hasPermssion: 0,
-	credits: "Jukie~",
+	credits: "",
 	description: "Đưa ra ngẫu nhiên cho bạn 1 lời khuyên",
 	commandCategory: "Giải trí",
 	usages: "advice",

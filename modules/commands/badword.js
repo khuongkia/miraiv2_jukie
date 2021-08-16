@@ -1,8 +1,8 @@
 module.exports.config = {
     name: "badword",
     version: "1.0.5",
-    hasPermssion: 0,
-    credits: "Jukie~",
+    hasPermssion: 2,
+    credits: "quên~",
     description: "",
     commandCategory: "Cấu hình",
     usages: "add [từ ngữ]",

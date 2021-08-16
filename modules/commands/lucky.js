@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "lucky",
 	version: "0.0.1",
 	hasPermssion: 0,
-	credits: "Jukie~",
+	credits: "HungCho",
 	description: "Đoán con số may mắn từ 0 đến 5",
 	commandCategory: "Giải trí",
 	usages: "lucky 5",

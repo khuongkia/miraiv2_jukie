@@ -2,7 +2,7 @@ module.exports.config = {
     name: "data",
     version: "1.0.0",
     hasPermssion: 0,
-    credits: "Jukie",
+    credits: "quên",
     description: "",
     commandCategory: "Nhóm",
     usages: "",

@@ -14,10 +14,10 @@ module.exports.config = {
 
 module.exports.languages = {
     "vi": {
-        "listAdmin": '[Admin] Danh sách toàn bộ người điều hành bot: \n\n%1',
-        "notHavePermssion": '[Admin] Bạn không đủ quyền hạn để có thể sử dụng chức năng "%1"',
-        "addedNewAdmin": '[Admin] Đã thêm %1 người dùng trở thành người điều hành bot:\n\n%2',
-        "removedAdmin": '[Admin] Đã gỡ bỏ %1 người điều hành bot:\n\n%2'
+        "listAdmin": '⚡️ Danh sách toàn bộ người điều hành bot: \n\n%1',
+        "notHavePermssion": '⚡️ Bạn không đủ quyền hạn để có thể sử dụng chức năng "%1"',
+        "addedNewAdmin": '⚡️ Đã thêm %1 người dùng trở thành người điều hành bot:\n\n%2',
+        "removedAdmin": '⚡️Đã gỡ bỏ %1 người điều hành bot:\n\n%2'
     },
     "en": {
         "listAdmin": '[Admin] Admin list: \n\n%1',

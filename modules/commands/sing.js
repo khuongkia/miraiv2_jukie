@@ -24,13 +24,13 @@ module.exports.handleReply = async function({ api, event, handleReply }) {
 		ytdl(handleReply.link[event.body - 1])
 			.pipe(createWriteStream(__dirname + `/cache/${handleReply.link[event.body - 1]}.m4a`))
 			.on("close", () => {
-				if (statSync(__dirname + `/cache/${handleReply.link[event.body - 1]}.m4a`).size > 26214400) return api.sendMessage('Không thể gửi file vì dung lượng lớn hơn 25MB.', event.threadID, () => unlinkSync(__dirname + `/cache/${handleReply.link[event.body - 1]}.m4a`), event.messageID);
-				else return api.sendMessage({ attachment: createReadStream(__dirname + `/cache/${handleReply.link[event.body - 1]}.m4a`) }, event.threadID, () => unlinkSync(__dirname + `/cache/${handleReply.link[event.body - 1]}.m4a`), event.messageID);
+				if (statSync(__dirname + `/cache/${handleReply.link[event.body - 1]}.m4a`).size > 26214400) return api.sendMessage('⚡️Không thể gửi file vì dung lượng lớn hơn 25MB.', event.threadID, () => unlinkSync(__dirname + `/cache/${handleReply.link[event.body - 1]}.m4a`), event.messageID);
+				else return api.sendMessage({ body: "🌟Chúc bạn nghe nhạc vui vẻ <3 ", attachment: createReadStream(__dirname + `/cache/${handleReply.link[event.body - 1]}.m4a`) }, event.threadID, () => unlinkSync(__dirname + `/cache/${handleReply.link[event.body - 1]}.m4a`), event.messageID);
 			})
-			.on("error", (error) => api.sendMessage(`Đã xảy ra vấn đề khi đang xử lý request, lỗi: \n${error}`, event.threadID, event.messageID));
+			.on("error", (error) => api.sendMessage(`⚡️Đã xảy ra vấn đề khi đang xử lý request, lỗi: \n${error}`, event.threadID, event.messageID));
 	}
 	catch {
-		api.sendMessage("Không thể xử lý yêu cầu của bạn!", event.threadID, event.messageID);
+		api.sendMessage("⚡️Không thể xử lý yêu cầu của bạn!", event.threadID, event.messageID);
 	}
 	return api.unsendMessage(handleReply.messageID);
 }
@@ -42,7 +42,7 @@ module.exports.run = async function({ api, event, args }) {
 	
 	const youtube = new YouTubeAPI(global.configModule[this.config.name].YOUTUBE_API);
 	
-	if (args.length == 0 || !args) return api.sendMessage('Phần tìm kiếm không được để trống!', event.threadID, event.messageID);
+	if (args.length == 0 || !args) return api.sendMessage('⚡️Phần tìm kiếm không được để trống!', event.threadID, event.messageID);
 	const keywordSearch = args.join(" ");
 	const videoPattern = /^(https?:\/\/)?(www\.)?(m\.)?(youtube\.com|youtu\.?be)\/.+$/gi;
 	const urlValid = videoPattern.test(args[0]);
@@ -54,14 +54,14 @@ module.exports.run = async function({ api, event, args }) {
 			ytdl(args[0])
 				.pipe(createWriteStream(__dirname + `/cache/${id}.m4a`))
 				.on("close", () => {
-					if (statSync(__dirname + `/cache/${id}.m4a`).size > 26214400) return api.sendMessage('Không thể gửi file vì dung lượng lớn hơn 25MB.', event.threadID, () => unlinkSync(__dirname + `/cache/${id}.m4a`), event.messageID);
+					if (statSync(__dirname + `/cache/${id}.m4a`).size > 26214400) return api.sendMessage('⚡️Không thể gửi file vì dung lượng lớn hơn 25MB.', event.threadID, () => unlinkSync(__dirname + `/cache/${id}.m4a`), event.messageID);
 					else return api.sendMessage({attachment: createReadStream(__dirname + `/cache/${id}.m4a`)}, event.threadID, () => unlinkSync(__dirname + `/cache/${id}.m4a`) , event.messageID)
 				})
-				.on("error", (error) => api.sendMessage(`Đã xảy ra vấn đề khi đang xử lý request, lỗi: \n${error}`, event.threadID, event.messageID));
+				.on("error", (error) => api.sendMessage(`⚡️Đã xảy ra vấn đề khi đang xử lý request, lỗi: \n${error}`, event.threadID, event.messageID));
 		}
 		catch (e) {
 			console.log(e);
-			api.sendMessage("Không thể xử lý yêu cầu của bạn!", event.threadID, event.messageID);
+			api.sendMessage("⚡️Không thể xử lý yêu cầu của bạn!", event.threadID, event.messageID);
 		}
 	}
 	else {
@@ -71,13 +71,13 @@ module.exports.run = async function({ api, event, args }) {
 			for (const value of results) {
 				if (typeof value.id !== 'undefined') {;
 					link.push(value.id);
-					msg += (`${num++}. ${value.title}\n`);
+					msg += (`${num++}. ${value.title}\n≻───── ⋆✩⋆ ─────≺\n`);
 				}
 			}
-			return api.sendMessage(`🎼 Có ${link.length} kết quả trùng với từ khoá tìm kiếm của bạn: \n${msg}\nHãy reply(phản hồi) chọn một trong những tìm kiếm trên`, event.threadID,(error, info) => global.client.handleReply.push({ name: this.config.name, messageID: info.messageID, author: event.senderID, link }), event.messageID);
+			return api.sendMessage(`⚡️Có ${link.length} kết quả trùng với từ khoá tìm kiếm của bạn: \n\n${msg}\n⚡️Hãy reply(phản hồi) chọn một trong những tìm kiếm trên`, event.threadID,(error, info) => global.client.handleReply.push({ name: this.config.name, messageID: info.messageID, author: event.senderID, link }), event.messageID);
 		}
 		catch (error) {
-			api.sendMessage("Không thể xử lý request do dã phát sinh lỗi: " + error.message, event.threadID, event.messageID);
+			api.sendMessage("⚡️Không thể xử lý request do dã phát sinh lỗi: " + error.message, event.threadID, event.messageID);
 		}
 	}
 }

@@ -11,7 +11,7 @@ module.exports.config = {
 
 module.exports.languages = {
 	"vi": {
-		"sendSuccess": "Đã gửi tin nhắn đến %1 nhóm!",
+		"sendSuccess": "⚡️Đã gửi tin nhắn đến %1 nhóm!",
 		"sendFail": "[!] Không thể gửi thông báo tới %1 nhóm"
 	},
 	"en": {
@@ -27,7 +27,7 @@ module.exports.run = async ({ api, event, args, getText }) => {
 	for (const idThread of allThread) {
 		if (isNaN(parseInt(idThread)) || idThread == event.threadID) ""
 		else {
-			api.sendMessage("» THÔNG BÁO TỪ ADMIN «\n\n" + args.join(" ") , idThread, (error, info) => {
+			api.sendMessage("≻─────Message from Admin─────≺\n\n" + args.join(" ") , idThread, (error, info) => {
 				if (error) cantSend.push(idThread);
 			});
 			count++;

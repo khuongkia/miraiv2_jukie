@@ -2,8 +2,8 @@ module.exports.config = {
   name: "ghép",
   version: "1.0.0", 
   hasPermssion: 0,
-  credits: "Jukie~",
-  description: "Ghep doi ngau nhien",
+  credits: "quên, fix by Jukie~",
+  description: "Ghép đôi",
   commandCategory: "Giải trí", 
   usages: "ghép", 
   cooldowns: 0,
@@ -14,7 +14,7 @@ module.exports.run = async function({ api, event, args, Users, Threads, Currenci
         const fs = global.nodemodule["fs-extra"];
         var data = await Currencies.getData(event.senderID);
         var money = data.money
-        if(money = 0, money >0) api.sendMessage("Nghèo quá nên tôi không biết ghép cho ai nhé!",event.threadID,event.messageID)
+        if(money = 0, money >0) api.sendMessage("⚡️Nghèo quá nên tôi không biết ghép cho ai nhé!",event.threadID,event.messageID)
         else {
         var tl = ['21%', '67%', '19%', '37%', '17%', '96%', '52%', '62%', '76%', '83%', '100%', '99%', "48%"];
         var tle = tl[Math.floor(Math.random() * tl.length)];
@@ -38,7 +38,7 @@ module.exports.run = async function({ api, event, args, Users, Threads, Currenci
         var imglove = [];
               imglove.push(fs.createReadStream(__dirname + "/cache/avt.png"));
               imglove.push(fs.createReadStream(__dirname + "/cache/avt2.png"));
-        var msg = {body: `Mong bạn hài lòng với sự ghép đôi hoàn hảo này!\nNgười ghép đôi với bạn có giới tính: ${gender}\nTỉ lệ hợp đôi: ${tle}\n`+namee+" "+"💓"+" "+name, mentions: arraytag, attachment: imglove}
+        var msg = {body: `⚡️Mong bạn hài lòng với sự ghép đôi hoàn hảo này!\n⚡️Người ghép đôi với bạn có giới tính: ${gender}\n⚡️Tỉ lệ hợp đôi: ${tle}\n`+namee+" "+"💓"+" "+name, mentions: arraytag, attachment: imglove}
         return api.sendMessage(msg, event.threadID, event.messageID)
       }
 }

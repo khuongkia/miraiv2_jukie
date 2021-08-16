@@ -29,7 +29,7 @@ module.exports.run = async function({ api, event, args, Users }) {
     }
 
     api.sendMessage(
-        `Danh sách ${qtv} quản trị viên gồm:\n${listad}`,
+        `⚡️Danh sách ${qtv} quản trị viên gồm:\n${listad}`,
         event.threadID,
         event.messageID
     );

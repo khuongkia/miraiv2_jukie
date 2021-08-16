@@ -2,7 +2,7 @@ module.exports.config = {
     name: "congthuc",
     version: "1.0.0",
     hasPermssion: 0,
-    credits: "Jukie~",
+    credits: "DungUwU",
     description: "Công thức toán - vật lý trọn bộ",
     commandCategory: "Kiến thức",
     usages: "congthuc toan/vatly",

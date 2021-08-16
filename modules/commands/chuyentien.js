@@ -2,7 +2,7 @@
     name: "chuyentien",
     version: "1.0.1",
     hasPermssion: 0,
-    credits: "Jukie~",
+    credits: "Mirai Team",
     description: "Chuyển tiền của bản thân cho ai đó",
     commandCategory: "Coins",
     usages: "pay @tag coins",

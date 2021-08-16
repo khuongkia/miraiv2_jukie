@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "history",
 	version: "1.0.0",
 	hasPermssion: 2,
-	credits: "Jukie",
+	credits: "NTKhang",
 	description: "Xem lịch sử sử dụng bot",
 	commandCategory: "Admin",
 	usages: "history",

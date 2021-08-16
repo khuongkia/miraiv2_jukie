@@ -28,11 +28,7 @@ var dd = d.getDate()-1
 var yyyy = d.getFullYear()
 var mm = d.getMonth()+1
 var zone = 0 
-var h = d.getHours()
-var m = d.getMinutes()
-var s = d.getSeconds()
-var ms = d.getMilliseconds()
-var name = (await api.getUserInfo(event.senderID))[event.senderID].name;
+
  
 // thứ ngày
 var day = d.getDay()
@@ -47,7 +43,6 @@ const amlich = global.nodemodule['amlich'];//module
 var rd = amlich.convertSolar2Lunar(dd,mm,yyyy,zone)
 return api.sendMessage(`Chào ${name},\nDương lịch: ${dd+1}/${mm}/${yyyy} (${day})\n`
                       +`Âm lịch: ${rd[0]}/${rd[1]}/${rd[2]}\n`
-                      +`Thời gian: ${h}:${m}:${s}`
                       +`\n`
                       +`Canh ngôn:\n`
                       +`"${jsoncd.data[String(Math.floor(Math.random() * 268) + 1)]}"` , event.threadID, event.messageID)

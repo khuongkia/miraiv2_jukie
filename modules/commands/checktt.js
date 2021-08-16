@@ -14,9 +14,9 @@ module.exports.config = {
 
 module.exports.languages = {
     "vi": {
-        "all": "%1/ %2 với %3 tin nhắn\n",
-        "mention": "%1 đứng hạng %2 với %3 tin nhắn",
-        "myself": "Bạn đang đứng hạng %1 với %2 tin nhắn"
+        "all": "⚡️%1/ %2 với %3 tin nhắn\n",
+        "mention": "⚡️%1 đứng hạng %2 với %3 tin nhắn",
+        "myself": "⚡️Bạn đang đứng hạng %1 với %2 tin nhắn"
     },
     "en": {
         "all": "%1/ %2 with %3 messages\n",

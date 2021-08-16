@@ -10,10 +10,10 @@ module.exports.config = {
 
 module.exports.languages = {
 	"vi": {
-		"returnResultDefault": "%1 có lẽ là một con số may mắn",
-		"invalidMax": "Khoảng giới hạn số quay không hợp lệ",
-		"invalidInput": "Khoảng bắt đầu hoặc khoảng kết thúc không phải là một con số hợp lệ!",
-		"returnResult": "%1 có lẽ là một con số may mắn trong khoảng từ %2 đến %3"
+		"returnResultDefault": "⚡️%1 có lẽ là một con số may mắn",
+		"invalidMax": "⚡️Khoảng giới hạn số quay không hợp lệ",
+		"invalidInput": "⚡️Khoảng bắt đầu hoặc khoảng kết thúc không phải là một con số hợp lệ!",
+		"returnResult": "⚡️%1 có lẽ là một con số may mắn trong khoảng từ %2 đến %3"
 	},
 
 	"en": {
