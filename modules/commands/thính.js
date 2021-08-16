@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "thính",
 	version: "1.0.0",
 	hasPermssion: 0,
-	credits: "Jukie~",
+	credits: "Leo",
 	description: "Thính đó",
 	commandCategory: "Giải trí",
 	usages: "gai",

@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "wiki",
 	version: "1.0.1",
 	hasPermssion: 0,
-	credits: "Jukie~",
+	credits: "Mirai Team",
 	description: "Tìm mọi thông tin cần biêt thông qua Wikipedia",
 	commandCategory: "Kiến thức",
 	usages: "[en] [thông tin cần tìm kiếm]",

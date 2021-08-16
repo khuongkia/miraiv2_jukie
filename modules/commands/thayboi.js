@@ -2,7 +2,7 @@ module.exports.config = {
     name: "bói-vui",
     version: "0.0.1",
     hasPermssion: 0,
-    credits: "Jukie~",
+    credits: "quên~",
     description: "Bói tình yêu, sự ngiệp, cuộc đời",
     commandCategory: "Giải trí",
     cooldowns: 5

@@ -2,7 +2,7 @@ module.exports.config = {
   name: "vnex",
   version: "1.0.2",
   hasPermssion: 0,
-  credits: "Jukie~",
+  credits: "HungCho",
   description: "Báo tin tức vnex !",
   commandCategory: "Tin tức",
   usages: "d",

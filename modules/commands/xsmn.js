@@ -2,7 +2,7 @@ module.exports.config = {
     name: "xsmn",
     version: "1.0.0",
     hasPermssion: 0,
-    credits: "Jukie~",
+    credits: "Thá» ",
     description: "Xem thông tin xổ số miền nam hôm nay",
     commandCategory: "Đen thôi đỏ quên đi",
     usages: "xsmn",

@@ -27,5 +27,5 @@ module.exports.run = async ({ api, event }) => {
 	const pidusage = await global.nodemodule["pidusage"](process.pid);
 
 	const timeStart = Date.now();
-	return api.sendMessage("", event.threadID, () => api.sendMessage(`Bot đã hoạt động được ${hours} giờ ${minutes} phút ${seconds} giây.\n\n❯ Tổng người dùng: ${global.data.allUserID.length}\n❯ Tổng Nhóm: ${global.data.allThreadID.length}\n❯ Cpu đang sử dụng: ${pidusage.cpu.toFixed(1)}%\n❯ Ram đang sử dụng: ${byte2mb(pidusage.memory)}\n❯ Ping: ${Date.now() - timeStart}ms`, event.threadID, event.messageID));
+	return api.sendMessage("", event.threadID, () => api.sendMessage(`⚡️Bot đã hoạt động được ${hours} giờ ${minutes} phút ${seconds} giây.\n\n⚡️Tổng người dùng: ${global.data.allUserID.length}\n⚡️Tổng Nhóm: ${global.data.allThreadID.length}\n⚡️Cpu đang sử dụng: ${pidusage.cpu.toFixed(1)}%\n⚡️Ram đang sử dụng: ${byte2mb(pidusage.memory)}\n⚡️Ping: ${Date.now() - timeStart}ms`, event.threadID, event.messageID));
 }

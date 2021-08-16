@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "sinhnhatad",
 	version: "1.0.1",
 	hasPermssion: 0,
-	credits: "Dien",
+	credits: "CatalizCS",
 	description: "Đếm ngược tới sinh nhật adminbot",
 	commandCategory: "INFO ADMINBOT",
 	cooldowns: 5

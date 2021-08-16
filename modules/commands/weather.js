@@ -18,7 +18,7 @@ module.exports.config = {
 
 module.exports.languages = {
 	"vi": {
-		"locationNotExist": "Địa điểm %1 không tồn tại!",
+		"locationNotExist": "⚡️Địa điểm %1 không tồn tại!",
 		"returnResult": "🌡 Nhiệt độ: %1°C\n🌡 Nhiệt độ cơ thể cảm nhận được: %2°C\n☁️ Cảnh quan hiện tại: %3\n💦 Độ ẩm: %4%\n💨 Tốc độ gió: %5km/h\n🌅 Mặt trời mọc vào lúc: %6\n🌄 Mặt trời lặn vào lúc: %7\n"
 	},
 	"en": {
